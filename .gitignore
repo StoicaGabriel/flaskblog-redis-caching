@@ -1,0 +1,5 @@
+venv
+.gitattributes
+website.db
+app/static/images/
+.idea
