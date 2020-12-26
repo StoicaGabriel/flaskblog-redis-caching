@@ -1,5 +1,6 @@
 venv
 .gitattributes
+__pycache__
 website.db
 app/static/images/
 .idea
