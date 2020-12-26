@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% cache 64*4 %}
+    <h1>About</h1>
+    <p>
+        This website is built with python and flask.
+    </p>
+{% endcache %}
+{% endblock content %}
