@@ -5,9 +5,11 @@ from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_caching import Cache
+from dotenv import load_dotenv
 import redis
 from app.config import Config
 
+load_dotenv()
 
 db = SQLAlchemy()
 r = redis.Redis(host='localhost', port=6379, db=0)
