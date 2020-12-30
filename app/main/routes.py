@@ -1,6 +1,5 @@
 from flask import render_template, request, Blueprint
 from app.models import Post
-from app import cache
 
 main = Blueprint('main', __name__)
 

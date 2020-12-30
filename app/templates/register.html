@@ -1,6 +1,5 @@
 {% extends 'layout.html' %}
 {% block content %}
-{% cache 64*4 %}
     <div class="content-section">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
@@ -70,5 +69,4 @@
             Already have an account? <a class="ml-2" href="{{ url_for('users.login') }}">Sign in</a>
         </small>
     </div>
-{% endcache %}
 {% endblock content %}
