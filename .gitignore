@@ -6,3 +6,4 @@ app/static/images/
 .idea
 .env
 *.pyc
+database.env
