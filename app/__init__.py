@@ -12,7 +12,7 @@ from app.config import Config
 load_dotenv()
 
 db = SQLAlchemy()
-r = redis.Redis(host='localhost', port=6379, db=0)
+r = redis.Redis(host='redis', port=6379, db=0, decode_responses=True)
 
 bcrypt = Bcrypt()
 login_manager = LoginManager()
@@ -24,7 +24,7 @@ cache = Cache(config={
     'CACHE_KEY_PREFIX': 'fcache',
     'CACHE_REDIS_HOST': 'localhost',
     'CACHE_REDIS_PORT': '6379',
-    'CACHE_REDIS_URL': 'redis://localhost:6379'
+    'CACHE_REDIS_URL': 'redis://redis:6379'
     })
 
 
