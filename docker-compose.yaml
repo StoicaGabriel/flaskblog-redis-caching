@@ -14,20 +14,6 @@ services:
     ports:
       - 5000:5000
 
-  mongodb:
-    image: mongo:latest
-    container_name: mongodb
-    hostname: mongodb
-    restart: always
-    volumes:
-      - mongodb_data_container:/data/db
-    env_file:
-      - database.env
-    ports:
-      - "27017:27017"
-    depends_on:
-      - api
-
   redis:
     image: redis
     restart: always
@@ -37,9 +23,8 @@ services:
     ports:
       - "6379:6379"
 
-# Helps in data persistance at container deletion.
+# Helps in data persistence at container deletion.
 volumes:
-  mongodb_data_container:
   redis-data:
   redis.conf:
   redis_data_cache:
